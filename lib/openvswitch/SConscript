@@ -3,7 +3,7 @@ import os
 import subprocess
 import sys
 
-vpath = '#/third_party/openvswitch-2.3.0'
+vpath = '#/third_party/openvswitch-2.5.4'
 
 env = DefaultEnvironment()
 env['ENV']['CFLAGS'] = '-DOPEN_CONTRAIL_CLIENT -g'
