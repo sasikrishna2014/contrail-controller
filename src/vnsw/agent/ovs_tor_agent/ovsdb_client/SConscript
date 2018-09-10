@@ -12,6 +12,7 @@ env.CppEnableExceptions()
 env.Append(CPPPATH = './')
 env.Append(CPPPATH = '#/build/include/openvswitch/include')
 env.Append(CPPPATH = '#/build/include/openvswitch/lib')
+env.Append(CPPPATH = '#/build/include/openvswitch/vtep')
 env.Append(LIBPATH = '#/build/lib')
 env.Append(LIBS = 'openvswitch')
 
