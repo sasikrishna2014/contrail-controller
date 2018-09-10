@@ -20,6 +20,7 @@ env.Append(LIBPATH = [
 env.Prepend(LIBS = [
                     'ovsdbclient',
                     'openvswitch',
+                    'vtep',
                     'vnswinit'
                    ])
 
