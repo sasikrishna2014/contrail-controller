@@ -17,7 +17,8 @@ else:
     cmd = ('(cd ' + Dir('.').abspath + '; ' + str(Dir(vpath)) +
            '/configure' + ' ' + config_opts + '; gmake clean; gmake; gmake install)')
 
-libs = [str(File('#build/lib/libopenvswitch.a'))]
+libs = [str(File('#build/lib/libopenvswitch.a')),
+        str(File('#build/lib/libvtep.a'))]
 
 openvswitch = env.Command('config.status', str(Dir(vpath)), cmd)
 
@@ -33,3 +34,4 @@ def Symlink(target, source):
 
 Symlink([Dir('#/build/include/openvswitch/include')], [Dir(vpath + '/include')])
 Symlink([Dir('#/build/include/openvswitch/lib')], [Dir(vpath + '/lib')])
+Symlink([Dir('#/build/include/openvswitch/vtep')], [Dir(vpath + '/vtep')])
